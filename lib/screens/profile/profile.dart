@@ -100,7 +100,7 @@ class Profile extends StatelessWidget {
                     ),
                     DetailField(
                       size: size,
-                      detail: 'Computer Engineering',
+                      detail: userData.phoneNo,
                       icon: const Icon(
                         CupertinoIcons.house_alt,
                         color: darkColor,
