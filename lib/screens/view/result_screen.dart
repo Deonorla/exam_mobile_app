@@ -7,6 +7,9 @@ import 'package:cbt_mobile_application/widgets/questions/question_number_card.da
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../widgets/main_button.dart';
+import '../home/home_screen.dart';
+
 class ResultScreen extends GetView<QuestionController> {
   const ResultScreen({super.key});
 
@@ -77,7 +80,24 @@ class ResultScreen extends GetView<QuestionController> {
                                 });
                           }))
                 ],
-              )))
+              ))),
+              Container(
+                margin: const EdgeInsets.only(bottom: 15),
+                child: ColoredBox(
+                  color: Colors.transparent,
+                  child: Padding(
+                    padding:
+                    const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                    child: MainButton(
+                      onTap: () {
+                        Get.offAll(()=> const HomeScreen());
+                      },
+                      title: 'Go to homepage',
+                    ),
+                  ),
+                ),
+              )
+
             ],
           ),
         ));
